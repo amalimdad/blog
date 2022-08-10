@@ -56,7 +56,6 @@ const Slider = ({ items }: { items: SliderInterface[] }) => {
           <div className="overlay"></div>
           {carouselControl(true)}
           {items.map((item, i) => (<>
-
             <div className="w-full flex-shrink-0" key={i} ref={itemsReference[i]}>
               <img
                 src={item.img_url}
@@ -71,15 +70,6 @@ const Slider = ({ items }: { items: SliderInterface[] }) => {
           </>
           ))}
           {carouselControl()}
-          {/* <!-- The dots/circles --> */}
-          <div className='content-details'>
-            {
-              items.map((item, index) =>
-                <span className='' onClick={() => { console.log(index + 1) }}></span>
-              )
-            }
-          </div>
-
         </div>
       </div>
     </>
