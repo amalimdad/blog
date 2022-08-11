@@ -1,7 +1,6 @@
 
 
 import React, { createRef, useEffect, useState } from 'react';
-import "./Slider.scss"
 import cn from "classnames"
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import Button from '../shared/button/Button';
@@ -52,8 +51,8 @@ const Slider = ({ items }: { items: SliderInterface[] }) => {
     <>
 
       <div className="flex justify-center w-screen relative">
-        <div className="slider">
-          <div className="overlay"></div>
+        <div className="inline-flex overflow-x-hidden snap-x snap-mandatory overflow-hidden w-screen">
+          <div className=" absolute bg-gred01 h-full w-full inset-0 opacity-100"></div>
           {carouselControl(true)}
           {items.map((item, i) => (<>
             <div className="w-full flex-shrink-0" key={i} ref={itemsReference[i]}>
